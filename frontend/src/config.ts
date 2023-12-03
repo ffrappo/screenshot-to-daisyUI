@@ -2,8 +2,7 @@
 export const IS_RUNNING_ON_CLOUD =
   import.meta.env.VITE_IS_DEPLOYED === "true" || false;
 
-export const WS_BACKEND_URL =
-  import.meta.env.VITE_WS_BACKEND_URL || "ws://localhost:7001";
+export const WS_BACKEND_URL = "ws://localhost:7001";
 
 export const HTTP_BACKEND_URL =
   import.meta.env.VITE_HTTP_BACKEND_URL || "http://localhost:7001";

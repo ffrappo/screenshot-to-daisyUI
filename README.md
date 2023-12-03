@@ -1,12 +1,26 @@
-# this fork
+# Screenshots to daisyUI
 
- - This only does screenshot to daisyUI.
- - Updated run instructions
+Finetuned to convert screenshots to daisyUI.
+You can specify a theme to use from the official list.
 
+ - [daisyUI Themes](https://daisyui.com/docs/themes/)
 
-# screenshot-to-code
+## About this repository
 
-This simple app converts a screenshot to code (HTML/Tailwind CSS, or React or Vue or Bootstrap). It uses GPT-4 Vision to generate the code and DALL-E 3 to generate similar-looking images. You can now also enter a URL to clone a live website!
+This is a fork of [https://github.com/abi/screenshot-to-code](https://github.com/abi/screenshot-to-code).
+
+#### **Image to daisyUI**
+
+This fork only generates code from a **screenshot** to **daisyUI**. It was made for personal use and it will probably still take a developer to integrate correctly.
+
+#### **Mac Compatibility**
+
+I have updated the run instructions and settings for out-of-the-box mac compatibility.
+ 
+
+### To-do
+ Not a expert at configurating scripts, but I think you could change the dev script in package.json to launch both frontend and backend with just one command, with something like this:
+`"dev": "vite & cd ../backend && poetry install && poetry shell && poetry run uvicorn main:app --reload --port 7001"`
 
 
 ## 🛠 Getting Started
@@ -32,9 +46,9 @@ yarn
 yarn dev
 ```
 
-Open http://localhost:5173 to use the app.
+Open `http://localhost:5173` to use the app.
 
-If you prefer to run the backend on a different port, update VITE_WS_BACKEND_URL in `frontend/.env.local`
+If you prefer to run the backend on a different port, update VITE_WS_BACKEND_URL in `frontend/.env.local` (this is not really working, need to inspect).
 
 For debugging purposes, if you don't want to waste GPT4-Vision credits, you can run the backend in mock mode (which streams a pre-recorded response):
 
@@ -55,9 +69,8 @@ The app will be up and running at http://localhost:5173. Note that you can't dev
 
 ## 🙋‍♂️ FAQs
 
-- **I'm running into an error when setting up the backend. How can I fix it?** [Try this](https://github.com/abi/screenshot-to-code/issues/3#issuecomment-1814777959). If that still doesn't work, open an issue.
 - **How do I get an OpenAI API key?** See https://github.com/abi/screenshot-to-code/blob/main/Troubleshooting.md
-- **How can I provide feedback?** For feedback, feature requests and bug reports, open an issue or ping me on [Twitter](https://twitter.com/_abi_).
+- **How can I provide feedback?** For feedback, feature requests and bug reports, open an issue.
 
 ## 📚 Examples
 

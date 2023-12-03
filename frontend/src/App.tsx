@@ -28,7 +28,7 @@ import TermsOfServiceDialog from "./components/TermsOfServiceDialog";
 import html2canvas from "html2canvas";
 import { USER_CLOSE_WEB_SOCKET_CODE } from "./constants";
 import CodeTab from "./components/CodeTab";
-import OutputSettingsSection from "./components/OutputSettingsSection";
+// import OutputSettingsSection from "./components/OutputSettingsSection";
 
 function App() {
   const [appState, setAppState] = useState<AppState>(AppState.INITIAL);
@@ -187,11 +187,11 @@ function App() {
       <div className="lg:fixed lg:inset-y-0 lg:z-40 lg:flex lg:w-96 lg:flex-col">
         <div className="flex grow flex-col gap-y-2 overflow-y-auto border-r border-gray-200 bg-white px-6 dark:bg-zinc-950 dark:text-white">
           <div className="flex items-center justify-between mt-10 mb-2">
-            <h1 className="text-2xl ">Screenshot to Code</h1>
+            <h1 className="text-2xl ">Screenshot to daisyUI</h1>
             <SettingsDialog settings={settings} setSettings={setSettings} />
           </div>
 
-          <OutputSettingsSection
+          {/* <OutputSettingsSection
             generatedCodeConfig={settings.generatedCodeConfig}
             setGeneratedCodeConfig={(config: GeneratedCodeConfig) =>
               setSettings((prev) => ({
@@ -202,7 +202,7 @@ function App() {
             shouldDisableUpdates={
               appState === AppState.CODING || appState === AppState.CODE_READY
             }
-          />
+          /> */}
 
           {IS_RUNNING_ON_CLOUD &&
             !(settings.openAiApiKey || settings.accessCode) && (

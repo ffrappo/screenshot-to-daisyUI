@@ -13,3 +13,5 @@ backend/run_logs/*
 frontend/.env.local
 .env
 backend/poetry.lock
+backend/backend/run_logs/
+backend/backend/.DS_Store
