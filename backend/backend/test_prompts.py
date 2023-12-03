@@ -1,7 +1,7 @@
 from prompts import assemble_prompt
 
 
-REACT_TAILWIND_SYSTEM_PROMPT = """
+TAILWIND_DAISYUI_SYSTEM_PROMPT = """
 You are an expert React/Tailwind developer
 You take screenshots of a reference web page from the user, and then build single page apps 
 using React and Tailwind CSS.
@@ -33,8 +33,8 @@ Do not include markdown "```" or "```html" at the start or end.
 
 def test_prompts():
 
-    react_tailwind_prompt = assemble_prompt(
-        "image_data_url", "react_tailwind", "result_image_data_url"
+    tailwind_daisyui_prompt = assemble_prompt(
+        "image_data_url", "tailwind_daisyui", "result_image_data_url"
     )
-    assert react_tailwind_prompt[0]["content"] == REACT_TAILWIND_SYSTEM_PROMPT
+    assert tailwind_daisyui_prompt[0]["content"] == TAILWIND_DAISYUI_SYSTEM_PROMPT
 

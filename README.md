@@ -1,42 +1,25 @@
 # this fork
 
-This only does screenshot to daisyUI.
+ - This only does screenshot to daisyUI.
+ - Updated run instructions
 
 
 # screenshot-to-code
 
 This simple app converts a screenshot to code (HTML/Tailwind CSS, or React or Vue or Bootstrap). It uses GPT-4 Vision to generate the code and DALL-E 3 to generate similar-looking images. You can now also enter a URL to clone a live website!
 
-https://github.com/abi/screenshot-to-code/assets/23818/6cebadae-2fe3-4986-ac6a-8fb9db030045
-
-See the [Examples](#-examples) section below for more demos.
-
-## 🚀 Try It Out!
-
-🆕 [Try it here](https://screenshottocode.com) (bring your own OpenAI key - **your key must have access to GPT-4 Vision. See [FAQ](#%EF%B8%8F-faqs) section below for details**). Or see [Getting Started](#-getting-started) below for local install instructions.
-
-## 🌟 Recent Updates
-
-- Nov 30 - Dark mode, output code in Ionic (thanks [@dialmedu](https://github.com/dialmedu)), set OpenAI base URL
-- Nov 28 - 🔥 🔥 🔥 Customize your stack: React or Bootstrap or TailwindCSS
-- Nov 23 - Send in a screenshot of the current replicated version (sometimes improves quality of subsequent generations)
-- Nov 21 - Edit code in the code editor and preview changes live thanks to [@clean99](https://github.com/clean99)
-- Nov 20 - Paste in a URL to screenshot and clone (requires [ScreenshotOne free API key](https://screenshotone.com?via=screenshot-to-code))
-- Nov 19 - Support for dark/light code editor theme - thanks [@kachbit](https://github.com/kachbit)
-- Nov 16 - Added a setting to disable DALL-E image generation if you don't need that
-- Nov 16 - View code directly within the app
-- Nov 15 - You can now instruct the AI to update the code as you wish. It is helpful if the AI messed up some styles or missed a section.
 
 ## 🛠 Getting Started
 
 The app has a React/Vite frontend and a FastAPI backend. You will need an OpenAI API key with access to the GPT-4 Vision API.
 
-Run the backend (I use Poetry for package management - `pip install poetry` if you don't have it):
+Run the backend (I use Poetry for package management - `brew install poetry` if you don't have it):
 
 ```bash
 cd backend
 echo "OPENAI_API_KEY=sk-your-key" > .env
 poetry install
+cd backend # yes, backend/backend
 poetry shell
 poetry run uvicorn main:app --reload --port 7001
 ```

@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite & cd ../backend && poetry install && poetry shell && poetry run uvicorn main:app --reload --port 7001",
     "dev-hosted": "vite --mode prod",
     "build": "tsc && vite build",
     "build-hosted": "tsc && vite build --mode prod",

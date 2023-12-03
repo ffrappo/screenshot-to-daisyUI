@@ -1,4 +1,4 @@
-REACT_TAILWIND_SYSTEM_PROMPT = """
+TAILWIND_DAISYUI_SYSTEM_PROMPT = """
 You are an expert React/Tailwind developer
 You take screenshots of a reference web page from the user, and then build single page apps 
 using React and Tailwind CSS.
@@ -36,7 +36,7 @@ def assemble_prompt(
     image_data_url, generated_code_config: str, result_image_data_url=None
 ):
     # Set the system prompt based on the output settings
-    system_content = REACT_TAILWIND_SYSTEM_PROMPT
+    system_content = TAILWIND_DAISYUI_SYSTEM_PROMPT
 
     user_content = [
         {

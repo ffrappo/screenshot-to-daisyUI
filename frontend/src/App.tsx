@@ -44,7 +44,7 @@ function App() {
       screenshotOneApiKey: null,
       isImageGenerationEnabled: true,
       editorTheme: EditorTheme.COBALT,
-      generatedCodeConfig: GeneratedCodeConfig.HTML_TAILWIND,
+      generatedCodeConfig: GeneratedCodeConfig.TAILWIND_DAISYUI,
       // Only relevant for hosted version
       isTermOfServiceAccepted: false,
       accessCode: null,
@@ -64,7 +64,7 @@ function App() {
     if (!settings.generatedCodeConfig) {
       setSettings((prev) => ({
         ...prev,
-        generatedCodeConfig: GeneratedCodeConfig.HTML_TAILWIND,
+        generatedCodeConfig: GeneratedCodeConfig.TAILWIND_DAISYUI,
       }));
     }
   }, [settings.generatedCodeConfig, setSettings]);

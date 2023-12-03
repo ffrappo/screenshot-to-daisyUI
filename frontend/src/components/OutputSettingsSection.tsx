@@ -9,31 +9,11 @@ import { GeneratedCodeConfig } from "../types";
 
 function generateDisplayComponent(config: GeneratedCodeConfig) {
   switch (config) {
-    case GeneratedCodeConfig.HTML_TAILWIND:
+    case GeneratedCodeConfig.TAILWIND_DAISYUI:
       return (
         <div>
-          <span className="font-semibold">HTML</span> +{" "}
-          <span className="font-semibold">Tailwind</span>
-        </div>
-      );
-    case GeneratedCodeConfig.REACT_TAILWIND:
-      return (
-        <div>
-          <span className="font-semibold">React</span> +{" "}
-          <span className="font-semibold">Tailwind</span>
-        </div>
-      );
-    case GeneratedCodeConfig.BOOTSTRAP:
-      return (
-        <div>
-          <span className="font-semibold">Bootstrap</span>
-        </div>
-      );
-    case GeneratedCodeConfig.IONIC_TAILWIND:
-      return (
-        <div>
-          <span className="font-semibold">Ionic</span> +{" "}
-          <span className="font-semibold">Tailwind</span>
+          <span className="font-semibold">Tailwind</span> +{" "}
+          <span className="font-semibold">daisyUI</span>
         </div>
       );
     default:
@@ -69,17 +49,8 @@ function OutputSettingsSection({
           </SelectTrigger>
           <SelectContent>
             <SelectGroup>
-              <SelectItem value={GeneratedCodeConfig.HTML_TAILWIND}>
-                {generateDisplayComponent(GeneratedCodeConfig.HTML_TAILWIND)}
-              </SelectItem>
-              <SelectItem value={GeneratedCodeConfig.REACT_TAILWIND}>
-                {generateDisplayComponent(GeneratedCodeConfig.REACT_TAILWIND)}
-              </SelectItem>
-              <SelectItem value={GeneratedCodeConfig.BOOTSTRAP}>
-                {generateDisplayComponent(GeneratedCodeConfig.BOOTSTRAP)}
-              </SelectItem>
-              <SelectItem value={GeneratedCodeConfig.IONIC_TAILWIND}>
-                {generateDisplayComponent(GeneratedCodeConfig.IONIC_TAILWIND)}
+              <SelectItem value={GeneratedCodeConfig.TAILWIND_DAISYUI}>
+                {generateDisplayComponent(GeneratedCodeConfig.TAILWIND_DAISYUI)}
               </SelectItem>
             </SelectGroup>
           </SelectContent>
