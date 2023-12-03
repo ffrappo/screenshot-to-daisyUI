@@ -12,3 +12,4 @@ backend/run_logs/*
 # Env vars
 frontend/.env.local
 .env
+backend/poetry.lock
