@@ -6,7 +6,8 @@
 backend/run_logs/*
 
 # Weird Docker setup related files
-backend/backend/*
+# commented because of https://github.com/abi/screenshot-to-code/issues/3#issuecomment-1814777959
+# backend/backend/*
 
 # Env vars
 frontend/.env.local
